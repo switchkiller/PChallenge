@@ -1,4 +1,4 @@
-nsert Node at the begining of a linked list
+/*nsert Node at the begining of a linked list
   Initially head pointer argument could be NULL for empty list
   Node is defined as 
   struct Node
