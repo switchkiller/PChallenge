@@ -20,7 +20,7 @@ Node* RemoveDuplicates(Node *head)
             temp->next=(temp->next)->next;
             free (temp1);
         }
-        temp=temp->next;
+        else temp=temp->next;
     }
     return head;
 }
