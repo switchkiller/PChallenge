@@ -3,7 +3,6 @@
 
 *Added solution to DS problems*
 
---Linked List--
+    Linked List
 
---Tree--
-
+    Tree
