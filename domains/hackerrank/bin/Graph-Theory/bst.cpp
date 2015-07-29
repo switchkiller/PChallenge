@@ -94,7 +94,18 @@ void insert_edge(graph* g, int x , int y , bool directed){
   p->y = y;
   p->next = g->edges[x];
   g->edges[x] = p;
+  g->degree[x]++;
+  if (directed == FALSE){
+    insert_edge(g,y,x,TRUE);
+  else
+    g->nedges++;
+  }
+}
 
+void print_graph(graph *g){
+  int i;
+  edgenode *p;
+  
 }
 
 
