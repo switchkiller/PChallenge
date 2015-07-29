@@ -124,6 +124,25 @@ void bst(graph* g, int start){
   queue* q;
   int v
   int y;
+  edgenode* p;
+  enqueue(start);
+  discovered[start] = TRUE;
+  while (isEmpty() == 1){
+    v=dequeue();
+    processed[v] == TRUE;
+    p = g->edges[v];
+    while (p!=NULL){
+      y=p->y;
+      if ((processed[y] == FALSE) || g->directed)
+        process_edge(v,y);
+      if (discovered[y] == FALSE){
+        enqueue(y);
+        discovered[y] = TRUE;
+        parent[y]=v;
+      }
+      p = p->link;
+    }
+  }
 
 }
 
