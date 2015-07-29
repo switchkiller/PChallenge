@@ -5,6 +5,10 @@
 #define MAXV //
 using namespace std;
 
+bool processed[MAXV + 1
+bool discovered[MAXV + 1]
+int parents[MAXV + 1]
+
 struct queue{
   int info;
   struct node* link;
@@ -105,10 +109,25 @@ void insert_edge(graph* g, int x , int y , bool directed){
 void print_graph(graph *g){
   int i;
   edgenode *p;
-  
+
 }
 
+void initialize_search(graph *g){
+  int i;
+  for (i=1; i <= nvertices; i++){
+    processed[i] = discovered[i] = FALSE;
+    parent[i] = -1;
+  }
+}
+
+void bst(graph* g, int start){
+  queue* q;
+  int v
+  int y;
+
+}
 
 void main(){
+
 
 }
