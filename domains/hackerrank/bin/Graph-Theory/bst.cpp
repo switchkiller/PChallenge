@@ -2,10 +2,10 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-#define MAXV //
+#define MAXV 100
 using namespace std;
 
-bool processed[MAXV + 1
+bool processed[MAXV + 1]
 bool discovered[MAXV + 1]
 int parents[MAXV + 1]
 

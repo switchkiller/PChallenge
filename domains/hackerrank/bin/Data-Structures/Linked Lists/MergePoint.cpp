@@ -6,11 +6,11 @@ int of two linked lists
        int data;
        Node* next;
    }
-*/
+
 int FindMergeNode(Node *headA, Node *headB)
 {
     // Complete this function
-    // Do not write the main method. 
+    // Do not write the main method.
     Node* temp=headA;
     Node* temp1=headB;
     int x=0,y=0,res,i;
@@ -20,7 +20,7 @@ int FindMergeNode(Node *headA, Node *headB)
     }
     while (temp1->next!=NULL)
     {   temp1=temp1->next;
-        y++;        
+        y++;
     }
     temp=headA;
     temp1=headB;

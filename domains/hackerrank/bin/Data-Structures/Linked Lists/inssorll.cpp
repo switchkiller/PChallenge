@@ -1,4 +1,4 @@
-nsert Node in a doubly sorted linked list 
+Insert Node in a doubly sorted linked list
     After each insertion, the list should be sorted
    Node is defined as
    struct Node
@@ -7,7 +7,6 @@ nsert Node in a doubly sorted linked list
      Node *next;
      Node *prev
    }
-*/
 Node* SortedInsert(Node *head,int data)
 {
 struct Node *newnode = NULL, *temp = NULL, *prenode = NULL;
@@ -20,7 +19,7 @@ if(head == NULL) // if empty list.
 {    head=newnode;
      return head;
 }
-      
+
 temp = head;
 while(temp)
     {
