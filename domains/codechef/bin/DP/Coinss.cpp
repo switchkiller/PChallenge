@@ -1,20 +1,18 @@
 // Byteland Gold Coin - codechef
-// TD app.
+// BT app.
 #include<bits/stdc++.h>
 using namespace std;
 #define MAX 100
+#define REP(a,b,i) for (int i = (a); i <= (b); i++)
 map<int, long long> lookup;
+int max(int a, int b) { return a > b ? a : b;}
 long long maxCoin(long long n){
-  if (n == 0) return 0;
-  if (lookup[n] != 0) return lookup[n];
-  else{
-    long long sum = maxCoin(n/2) + maxCoin(n/3) + maxCoin(n/4);
-    if (sum < n)
-      lookup[n] = n;
-    else
-      lookup[n] = sum;
-    return lookup[n];
+  lookup[1] = 1;
+  REP(2,n,i){
+    long long sum = max(i,lookup[i/2] + lookup[i/3] + lookup[i/4]);
+    lookup[i] = sum;
   }
+  return lookup[n];
 }
 int main(){
   long long n;
