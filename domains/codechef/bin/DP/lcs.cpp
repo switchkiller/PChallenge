@@ -5,6 +5,17 @@ using namespace std;
 #define MAX 1000
 #define REP(a,b,i) for (int i = (a); i <= (b); i++)
 #define ARRAY_SIZE(a) sizeof(a) / sizeof(a[0])
+// char findLcs(char str1[], char str2[], int **lcs,int a, int b){
+//   if (lcs[a][b] == 0)
+//     return;
+//   else if (str1[a-1] == str2[b-1])
+//     findLcs(str1, str2, lcs, a-1, b-1);
+//   else if (lcs[i-1][j] > lcs[i][j-1])
+//     findLcs(str1, str2, lcs, a-1, b);
+//   else
+//     findLcs(str1, str2, lcs, a, b-1);
+//
+// }
 
 int lcs_len(char str1[], char str2[], int a, int b){
   int lcs[a+1][b+1];
@@ -20,12 +31,6 @@ int lcs_len(char str1[], char str2[], int a, int b){
         lcs[i][j] = lcs[i][j-1] > lcs[i-1][j]?lcs[i][j-1]:lcs[i-1][j];
     }
   }
-  REP(0,a,i){
-    //cout << i << " ";
-    REP(0,b,j)
-      cout << lcs[i][j] << " ";
-    cout << endl;
-  }
   return lcs[a][b];
 }
 
@@ -34,9 +39,9 @@ int main(){
   char *str1, *str2;
   scanf("%d\n", &n);
   while (n--){
-  scanf("%d %d\n", &a, &b);
-  str1 = new char[a];
-  str2 = new char[b];
+    scanf("%d %d\n", &a, &b);
+    str1 = new char[a];
+    str2 = new char[b];
     cin >> str1 >> str2;
     len = lcs_len(str1, str2, a, b);
     printf("%d\n", len);
