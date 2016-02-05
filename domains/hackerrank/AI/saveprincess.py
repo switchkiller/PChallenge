@@ -1,7 +1,7 @@
 def printPath(dir,count):
     for _ in range(0,count): print(dir)
 def main():
-    M = int(intput())
+    M = int(input())
     for i in xrange(0,M):
         row = input().strip()
         if row.find('m') != -1 mario = [i, row.find('m')]
